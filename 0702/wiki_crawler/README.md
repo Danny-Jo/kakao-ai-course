@@ -1,0 +1,3 @@
+# command
+
+~path/wiki_crawler > scrapy crawl wiki_spider -o output.json
