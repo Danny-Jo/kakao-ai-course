@@ -19,17 +19,17 @@ df_melted['Year'] = df_melted['Year'].apply(lambda x: int(x.split()[0]))
 df_melted['Rank'] = df_melted.groupby(['Year', 'Series Name'])['Value'].rank(method='min', ascending=False)
 
 series_names = [
-    "GDP (current US$)",
-    "GDP (constant 2015 US$)",
+    # "GDP (current US$)",
+    # "GDP (constant 2015 US$)",
     "GDP growth (annual %)",
-    "GDP per capita (current US$)",
-    "GDP per capita (constant 2015 US$)",
+    # "GDP per capita (current US$)",
+    # "GDP per capita (constant 2015 US$)",
     "GDP per capita growth (annual %)",
-    "Inflation, GDP deflator (annual %)",
-    "Inflation, consumer prices (annual %)",
-    "Unemployment, total (% of total labor force) (modeled ILO estimate)",
-    "Unemployment, youth total (% of total labor force ages 15-24) (national estimate)",
-    "External balance on goods and services (current US$)",
+    # "Inflation, GDP deflator (annual %)",
+    # "Inflation, consumer prices (annual %)",
+    # "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    # "Unemployment, youth total (% of total labor force ages 15-24) (national estimate)",
+    # "External balance on goods and services (current US$)",
 ]
 
 sns.set(style="whitegrid")
