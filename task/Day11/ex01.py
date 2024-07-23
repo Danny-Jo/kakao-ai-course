@@ -1,8 +1,3 @@
-# kaggle datasets download -d mlg-ulb/creditcardfraud
-# unzip creditcardfraud.zip
-
-# K-평균 클러스터링 예제
-
 # 필요한 라이브러리 임포트
 import pandas as pd
 import numpy as np
@@ -10,8 +5,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
-# 데이터셋 로드
-data = pd.read_csv('./creditcard.csv')
+# 분할된 CSV 파일 로드 및 병합
+file_paths = ['creditcard_part1.csv', 'creditcard_part2.csv', 'creditcard_part3.csv']
+data = pd.concat([pd.read_csv(file) for file in file_paths])
 
 # 필요한 특성 선택
 X = data.drop(['Time', 'Class'], axis=1)
